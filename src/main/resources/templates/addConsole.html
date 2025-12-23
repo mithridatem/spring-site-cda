@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une console</title>
+</head>
+<body>
+<form th:action="@{/console}"  th:object="${console}" method="post">
+    <input type="text" name="" id="" placeholder="Entrer le nom de  console" th:field="*{name}">
+    <input type="text" name="" id="" placeholder="Entrer le nom fabricant" th:field="*{manufacturer}">
+    <input type="submit" value="Envoyer" th:value="Envoyer">
+</form>
+</body>
+</html>
