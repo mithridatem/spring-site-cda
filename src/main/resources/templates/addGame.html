@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un jeu</title>
+</head>
+<body>
+<!--Formulaire -->
+<h2></h2>
+<form th:action="@{/game}"  th:object="${game}" method="post">
+    <input type="text" placeholder="Entrer le nom du jeu" th:field="*{title}">
+    <input type="text" placeholder="Entrer la description" th:field="*{description}">
+    <input type="date" th:field="*{publishedAt}">
+    <select th:field="*{console}">
+        <option th:each="c : ${consoles}" th:value="${c.id}" th:text="${c.name}"></option>
+    </select>
+    <input type="submit" value="Envoyer" th:value="Envoyer">
+</form>
+</body>
+</html>

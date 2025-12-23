@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des jeux</title>
+</head>
+<body>
+    <div>
+        <h2>Liste des jeux</h2>
+        <div data-th-each="game:${games}">
+            <h3 th:text="${game.title}"></h3>
+            <p th:text="${game.description}"></p>
+            <p th:text="${#dates.format(game.publishedAt, 'dd/MM/yyyy')}"></p>
+            <h3 th:text="${game.console.name}"></h3>
+        </div>
+        <a href="/game/add">Ajouter un Jeu</a>
+    </div>
+</body>
+</html>

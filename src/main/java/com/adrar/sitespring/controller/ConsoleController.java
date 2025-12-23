@@ -27,7 +27,7 @@ public class ConsoleController {
     }
 
     @GetMapping("/console/add")
-    public String showConsole(Model model)
+    public String saveConsole(Model model)
     {
         model.addAttribute("console", new Console());
         return "addConsole";
